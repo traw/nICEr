@@ -41,11 +41,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <sys/socket.h>
 #ifndef LINUX
 #include <net/if.h>
-#if !defined(__OpenBSD__) && !defined(__NetBSD__)
-#include <net/if_var.h>
-#endif
-#include <net/if_dl.h>
-#include <net/if_types.h>
 #else
 #ifndef NOLINUXIF
 #include <linux/if.h>
@@ -57,9 +52,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <net/route.h>
 #endif
 #include <netinet/in.h>
-#ifndef LINUX
-#include <netinet/in_var.h>
-#endif
 #include <arpa/inet.h>
 #include <netdb.h>
 #endif
